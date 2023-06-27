@@ -55,6 +55,8 @@ add_action('save_post', 'save_story_element_type');
 // Add custom column to the post listing page
 function custom_post_image_column($columns) {
     $new_columns = array();
+    $new_columns['cb'] = '<input type="checkbox" />';
+    unset($columns['cb']);
     $new_columns['post_image'] = 'Image';
 
     return array_merge($new_columns, $columns);
