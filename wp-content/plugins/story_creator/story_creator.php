@@ -56,7 +56,8 @@ add_action('save_post', 'save_story_element_type');
 function custom_post_image_column($columns) {
     $new_columns = array();
     $new_columns['post_image'] = 'Image';
-    return array_merge($columns, $new_columns);
+
+    return array_merge($new_columns, $columns);
 }
 add_filter('manage_posts_columns', 'custom_post_image_column');
 
