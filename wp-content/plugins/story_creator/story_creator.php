@@ -48,3 +48,23 @@ function save_story_element_type($post_id) {
     }
 }
 add_action('save_post', 'save_story_element_type');
+
+
+// ==============================================================
+
+// Add custom column to the post listing page
+function custom_post_image_column($columns) {
+    $new_columns = array();
+    $new_columns['post_image'] = 'Image';
+    return array_merge($columns, $new_columns);
+}
+add_filter('manage_posts_columns', 'custom_post_image_column');
+
+// Populate the custom column with the post image miniature
+function custom_post_image_column_content($column, $post_id) {
+    if ($column == 'post_image') {
+        $thumbnail = get_the_post_thumbnail($post_id, array(50, 50));
+        echo $thumbnail;
+    }
+}
+add_action('manage_posts_custom_column', 'custom_post_image_column_content', 10, 2);
