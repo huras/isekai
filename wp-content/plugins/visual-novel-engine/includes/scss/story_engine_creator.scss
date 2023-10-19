@@ -6,11 +6,12 @@ $background-color_3: rgba(219, 219, 219, 0.69);
 
 .scene_node {
 	width: 100%;
-	height: 100px;
+	height: 120px;
 	background-color: $background-color_1;
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
+	flex-direction: column;
 	margin: 8px 0px;
 	
 	.node_body {
@@ -34,18 +35,18 @@ $background-color_3: rgba(219, 219, 219, 0.69);
 	
     
     &[node_type=set_background]{
-        height: 150px;
+        height: 170px;
 
         .background_preview{
-            height: 150px;
+            height: 170px;
         }
     }
 
     &[node_type=define_actor]  {
-        height: 210px;
+        height: 230px;
 
         .actor_preview{
-            height: 200px;
+            height: 210px;
 			
         }
 

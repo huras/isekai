@@ -115,9 +115,9 @@ class VisualNovelEngine {
 
 
                 </div>
-                <button class='delete_node_btn'>Delete</button>
+                <button type='button' class='delete_node_btn'>Delete</button>
             </div>
-            <button class='add_node_below_btn'>Add Event below</button>
+            <button type='button' class='add_node_below_btn'>Add Event below</button>
         </div>
         <?php
         return ob_get_clean();
