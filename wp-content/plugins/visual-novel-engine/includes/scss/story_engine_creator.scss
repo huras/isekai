@@ -12,6 +12,14 @@ $background-color_3: rgba(219, 219, 219, 0.69);
 	align-items: center;
 	justify-content: flex-start;
 	margin: 8px 0px;
+	
+	.node_body {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		width: 100%;
+		height: 100%;
+	}
     
 	.contents {
 		display: flex;
