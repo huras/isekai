@@ -90,6 +90,28 @@ function attachEventsOnNodes(){
         },
         // handle: ".handler"
     });
+
+    jQuery("#add_node_below_btn").on('click', (event) => {
+        //make a JS call do wordpress ajax with action lalaps
+        jQuery.ajax({
+            url: ajaxurl, // Use the WordPress AJAX URL
+            type: 'POST',
+            data: {
+                action: 'get_vne_node_template' // WordPress action name
+                // You can add additional data here if needed
+            },
+            success: function(response) {
+                jQuery(event.target).parents('.scene_node').insertAfter(response.data.html)
+                attachEventsOnNodes();
+                // Handle the AJAX success response here
+                console.log(response);
+            },
+            error: function(error) {
+                // Handle the AJAX error here
+                console.error(error);
+            }
+        });
+    });
   }
 
 function updateJsonString(){

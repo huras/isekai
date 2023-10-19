@@ -71,50 +71,53 @@ class VisualNovelEngine {
                 
                 // Output the select element
                 ?>
-                <select name="node_type" class="node_type_select">
-                    <?php
-                    foreach ($select_options as $group_label => $options) {
-                        echo '<optgroup label="' . esc_attr($group_label) . '">';
-                        foreach ($options as $value => $label) {
-                            echo '<option '.selected($value == $scene_node['node_type']).' value="' . esc_attr($value) . '">' . esc_html($label) . '</option>';
+                <div class='node_body'>
+                    <select name="node_type" class="node_type_select">
+                        <?php
+                        foreach ($select_options as $group_label => $options) {
+                            echo '<optgroup label="' . esc_attr($group_label) . '">';
+                            foreach ($options as $value => $label) {
+                                echo '<option '.selected($value == $scene_node['node_type']).' value="' . esc_attr($value) . '">' . esc_html($label) . '</option>';
+                            }
+                            echo '</optgroup>';
                         }
-                        echo '</optgroup>';
-                    }
-                    ?>
-                </select>
-                <div class='contents'>
-                    <div class='set_background'>
-                        <img src="<?= $url ?>" class='background_preview'>
-                        <input class='url_input' value='<?= $scene_node['url'] ?>' type='text'></input>                    
-                    </div>
-
-                    <div class='show_narration'>
-                        <textarea class='text_input'><?= $scene_node['text'] ?></textarea>
-                    </div>
-
-                    <div class='define_actor'>
-                        <img src="<?= $url ?>" class='actor_preview'>
-
-                        <div class='input-column'>
-                            <input class='url' value='<?= $scene_node['url'] ?>' type='text' placeholder='http://' title='http://'></input>
-                            <input class='name' value='<?= $scene_node['name'] ?>' type='text' placeholder='name' title='name'></input>
-                            <input class='slug' value='<?= $scene_node['slug'] ?>' type='text' placeholder='slug' title='slug'></input>
-                        </div>
-                        
-                        <div class='face_preview_wrapper'>
-                            <div class='face_preview'></div>
+                        ?>
+                    </select>
+                    <div class='contents'>
+                        <div class='set_background'>
+                            <img src="<?= $scene_node['url'] ?>" class='background_preview'>
+                            <input class='url_input' value='<?= $scene_node['url'] ?>' type='text'></input>                    
                         </div>
 
-                        <div class='input-column'>                            
-                            <input class='scale' value='<?= $scene_node['face_point']['scale'] ?>' type='number' step='0.01' type='text' placeholder='zoom' title='zoom'></input>
-                            <input class='x' value='<?= $scene_node['face_point']['x'] ?>' type='number' step='0.01' placeholder='x' title='x'></input>
-                            <input class='y' value='<?= $scene_node['face_point']['y'] ?>' type='number' step='0.01' placeholder='y' title='y'></input>
+                        <div class='show_narration'>
+                            <textarea class='text_input'><?= $scene_node['text'] ?></textarea>
                         </div>
+
+                        <div class='define_actor'>
+                            <img src="<?= $scene_node['url'] ?>" class='actor_preview'>
+
+                            <div class='input-column'>
+                                <input class='url' value='<?= $scene_node['url'] ?>' type='text' placeholder='http://' title='http://'></input>
+                                <input class='name' value='<?= $scene_node['name'] ?>' type='text' placeholder='name' title='name'></input>
+                                <input class='slug' value='<?= $scene_node['slug'] ?>' type='text' placeholder='slug' title='slug'></input>
+                            </div>
+                            
+                            <div class='face_preview_wrapper'>
+                                <div class='face_preview'></div>
+                            </div>
+
+                            <div class='input-column'>                            
+                                <input class='scale' value='<?= $scene_node['face_point']['scale'] ?>' type='number' step='0.01' type='text' placeholder='zoom' title='zoom'></input>
+                                <input class='x' value='<?= $scene_node['face_point']['x'] ?>' type='number' step='0.01' placeholder='x' title='x'></input>
+                                <input class='y' value='<?= $scene_node['face_point']['y'] ?>' type='number' step='0.01' placeholder='y' title='y'></input>
+                            </div>
+                        </div>
+
+
                     </div>
-
-
-                </div>
-                <button class='delete_node_btn'>Delete</button>
+                    <button class='delete_node_btn'>Delete</button>
+                <div>
+                <button class='add_node_below_btn'>Add Event below</button>
         </div>
         <?php
         return ob_get_clean();
