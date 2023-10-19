@@ -1,0 +1,81 @@
+/* CSS for styling the visual novel engine */
+#screen {
+    position: relative;
+    width: 1080px; /* Adjust as needed */
+    height: 720px; /* Adjust as needed */
+    margin: 0 auto;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+.characters {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+}
+.characters img{
+    max-width: 33%;
+}
+
+.dialog-window {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: calc(100% - 10px);
+    padding: 5px;
+    z-index: 2;
+}
+
+.dialog-window .speaker{
+    display: inline-block;
+    margin-bottom: 4px;
+    padding: 8px;
+}
+.dialog-window .name{
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+}
+.dialog-window .mugshot{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /* border: 5px solid rgb(119, 119, 119); */
+    background-position: cover;
+}
+.dialog-window .mugshot-placeholder{
+    height: 100px;
+    width: 100px;
+    background-color: rgba(0, 0, 0, 0.445);
+    position: relative;    
+    margin-bottom: 8px;
+}
+.dialog-window .text{
+    height: 30%;
+    font-size: 24px;
+}
+
+.vn-window{
+    font-size: 18px;
+    font-family: sans-serif;
+    color: white;
+    background-color: rgba(15, 7, 70, 0.763);
+    border: 3px solid rgb(119, 119, 119);
+    
+    /* box-shadow: 1px 1px 1px 2px rgba(238, 238, 238, 0.75); */
+    padding: 4px 10px;
+
+    line-height: 1.2;
+}

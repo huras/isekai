@@ -1,0 +1,21 @@
+{
+  "name": "lms-product-cpt",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "sass": "gulp sass",
+    "sass_watch": "gulp sass:watch",
+    "build": "webpack --watch",
+    "watch": "webpack --watch"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-cli": "^2.3.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-sass": "^5.1.0",
+    "node-sass": "^8.0.0",
+    "sass": "^1.58.0"
+  }
+}

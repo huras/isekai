@@ -8,6 +8,13 @@
 /wp-admin/
 /wp-content/index.php
 /wp-content/languages
+/wp-content/plugins/mailpoet
+/wp-content/plugins/jetpack
+/wp-content/plugins/woocommerce
+/wp-content/plugins/google-listings-and-ads
+/wp-content/plugins/classic-editor
+/wp-content/plugins/pinterest-for-woocommerce
+/wp-content/plugins/media-library-plus
 /wp-content/plugins/index.php
 /wp-content/themes/index.php
 /wp-includes/

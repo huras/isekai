@@ -1,0 +1,92 @@
+$color_1: white;
+$font-family_1: sans-serif;
+$background-color_1: rgb(209, 208, 208);
+$background-color_2: rgba(15, 7, 70, 0.763);
+$background-color_3: rgba(219, 219, 219, 0.69);
+
+.scene_node {
+	width: 100%;
+	height: 100px;
+	background-color: $background-color_1;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	margin: 8px 0px;
+    
+	.contents {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		>* {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+		}
+	}
+	
+    
+    &[node_type=set_background]{
+        height: 150px;
+
+        .background_preview{
+            height: 150px;
+        }
+    }
+
+    &[node_type=define_actor]  {
+        height: 210px;
+
+        .actor_preview{
+            height: 200px;
+			
+        }
+
+		.face_preview_wrapper{
+			background-color: $background-color_3;
+			border: 3px solid rgb(119, 119, 119);
+
+			margin-left: 16px;
+
+			
+			position: relative;
+			height: 100px;
+			width: 100px;
+
+			.face_preview{
+				position: absolute;
+				left: 0;
+				bottom:0;
+			}
+		}
+    }
+
+}
+#add_scene_node_btn {
+	margin-top: 16px;
+	height: 40px;
+}
+.node_type_select {
+	height: 100%;
+}
+.show_narration {
+	.text_input {
+		height: 100px;
+		width: 575px;
+		font-size: 18px;
+		font-family: $font-family_1;
+		color: $color_1;
+		background-color: $background-color_2;
+		border: 3px solid rgb(119, 119, 119);
+		padding: 4px 10px;
+		line-height: 1.2;
+	}
+}
+.input-column {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.w-30 {
+	width: 30%;
+}
