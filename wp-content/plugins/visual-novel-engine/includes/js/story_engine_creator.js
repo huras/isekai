@@ -91,7 +91,7 @@ function attachEventsOnNodes(){
         // handle: ".handler"
     });
 
-    jQuery(".add_node_below_btn").on('click', (event) => {
+    jQuery(".add_node_below_btn").off('click').on('click', (event) => {
         //make a JS call do wordpress ajax with action lalaps
         jQuery.ajax({
             url: ajaxurl, // Use the WordPress AJAX URL
