@@ -34,6 +34,10 @@ $background-color_3: rgba(219, 219, 219, 0.69);
 	}
 	
     
+	&[node_type=show_narration]{
+        height: 150px;
+    }
+
     &[node_type=set_background]{
         height: 170px;
 
