@@ -101,7 +101,7 @@ function attachEventsOnNodes(){
                 // You can add additional data here if needed
             },
             success: function(response) {
-                jQuery(event.target).parents('.scene_node').insertAfter(response.data.html)
+                jQuery(event.target).parents('.scene_node').after(response.data.html)
                 attachEventsOnNodes();
                 // Handle the AJAX success response here
                 console.log(response);
