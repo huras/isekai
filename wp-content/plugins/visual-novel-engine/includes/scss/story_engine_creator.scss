@@ -19,7 +19,7 @@ $background-color_3: rgba(219, 219, 219, 0.69);
 		align-items: center;
 		justify-content: flex-start;
 		width: 100%;
-		min-height: 100%;
+		height: 100%;
 	}
     
 	.contents {
@@ -35,18 +35,18 @@ $background-color_3: rgba(219, 219, 219, 0.69);
 	
     
     &[node_type=set_background]{
-        min-height: 170px;
+        height: 170px;
 
         .background_preview{
-            min-height: 170px;
+            height: 170px;
         }
     }
 
     &[node_type=define_actor]  {
-        min-height: 230px;
+        height: 230px;
 
         .actor_preview{
-            min-height: 210px;
+            height: 210px;
 			
         }
 
@@ -58,7 +58,7 @@ $background-color_3: rgba(219, 219, 219, 0.69);
 
 			
 			position: relative;
-			min-height: 100px;
+			height: 100px;
 			width: 100px;
 
 			.face_preview{
@@ -72,14 +72,14 @@ $background-color_3: rgba(219, 219, 219, 0.69);
 }
 #add_scene_node_btn {
 	margin-top: 16px;
-	min-height: 40px;
+	height: 40px;
 }
 .node_type_select {
-	min-height: 100%;
+	height: 100%;
 }
 .show_narration {
 	.text_input {
-		min-height: 100px;
+		height: 100px;
 		width: 575px;
 		font-size: 18px;
 		font-family: $font-family_1;
