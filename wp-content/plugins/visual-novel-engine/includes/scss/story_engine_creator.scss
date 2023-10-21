@@ -103,3 +103,47 @@ $background-color_3: rgba(219, 219, 219, 0.69);
 .w-30 {
 	width: 30%;
 }
+
+
+
+// ======================================= VNE Content
+
+#post_vne_content{
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+
+	.face_preview, .full_body_preview_wrapper{
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		flex-direction: column;
+	}
+
+	#full_body_preview{
+		height: 326px;
+	}
+
+	.character_face_preview_wrapper{
+		background-color: $background-color_3;
+		border: 3px solid rgb(119, 119, 119);
+	
+		margin-left: 16px;
+	
+		
+		position: relative;
+		height: 200px;
+		width: 200px;
+	
+		#character_face_preview{
+			position: absolute;
+			left: 0;
+			bottom:0;
+		}
+	}
+}
+
+
+table.wp-list-table:has(.face_preview_wrapper.admin_listing){
+	table-layout: auto!important;
+}

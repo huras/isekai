@@ -112,12 +112,10 @@ class VisualNovelEngine {
                             <input class='y' value='<?= $scene_node['face_point']['y'] ?>' type='number' step='0.01' placeholder='y' title='y'></input>
                         </div>
                     </div>
-
-
                 </div>
                 <button type='button' class='delete_node_btn'>Delete</button>
             </div>
-            <button type='button' class='add_node_below_btn'>Add Event below</button>
+            <button type='button' class='add_node_below_btn' title="Add event below"> + </button>
         </div>
         <?php
         return ob_get_clean();
