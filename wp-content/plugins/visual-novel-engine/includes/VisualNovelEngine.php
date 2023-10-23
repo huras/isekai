@@ -93,6 +93,15 @@ class VisualNovelEngine {
                         <textarea class='text_input'><?= $scene_node['text'] ?></textarea>
                     </div>
 
+                    <div class='show_dialog'>
+                        <textarea class='text_input'><?= $scene_node['text'] ?></textarea>
+                        <select name="character_select" id="character_select">
+                        </select>
+                        <input type="checkbox" name="show_face">
+                        <input type="checkbox" name="show_character">
+                        <input type="text" name="character_name">
+                    </div>
+
                     <div class='define_actor'>
                         <img src="<?= $scene_node['url'] ?>" class='actor_preview'>
 
